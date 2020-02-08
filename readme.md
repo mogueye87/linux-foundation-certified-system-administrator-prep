@@ -70,6 +70,7 @@ type ls # indicates that ls is the alias of "ls --color=auto"
 > A filesystem allows to store and retrieve data on a computer (EXT4). 
 
 #### Compare and manipulate file content, use input-output Redirection Part1- Create Files > Input-Output
+**cat, less, more, sort**
 
 ```sh
 ls -al # lists the available files
@@ -84,4 +85,21 @@ sort -r filename # sorting a file in the reverse order
 cat filename | sort
 sort filename > sorted.txt # output of the file sorted using the output redirection
 touch filename # update file update access and modifications time of a file 
+nano 
 ```
+
+**diff**
+-  compare two files or directories line by line
+-  several options for ignoring, filtering the comparison
+
+```sh
+diff abortion.csv abortion2.csv # show the difference between the two files
+diff -c first_filename second_filename # 
+```
+
+**comm**
+- compare two sorted files line by line 
+- output is displayed in 3 different columns, unique to file 1, unique twi file 2 and same in both.
+
+**cmp**
+- compare file byte by byte and return the position of the first difference.
