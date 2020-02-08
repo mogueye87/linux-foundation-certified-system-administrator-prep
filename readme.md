@@ -66,11 +66,11 @@ type python # give the location of the python
 type ls # indicates that ls is the alias of "ls --color=auto"
 ```
 
-# Filesystem
+#### Filesystem
 > A filesystem allows to store and retrieve data on a computer (EXT4). 
 
 #### Compare and manipulate file content, use input-output Redirection Part1- Create Files > Input-Output
-**cat, less, more, sort**
+**cat, less, more, sort**: commands for comparing files or directories
 
 ```sh
 ls -al # lists the available files
@@ -100,6 +100,12 @@ diff -c first_filename second_filename #
 **comm**
 - compare two sorted files line by line 
 - output is displayed in 3 different columns, unique to file 1, unique twi file 2 and same in both.
+```sh
+comm file1 file2
+```
 
 **cmp**
 - compare file byte by byte and return the position of the first difference.
+```sh
+cmp file1 file2
+```
