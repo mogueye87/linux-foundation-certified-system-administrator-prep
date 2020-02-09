@@ -109,3 +109,39 @@ comm file1 file2
 ```sh
 cmp file1 file2
 ```
+#### Use input-output redirection (e.g; >, >>, |, 2)
+**File Descriptors**
+**stdin(0)**: **Standard input**
+> How data is entered or presented for processing
+> Typically a keyboard or mouse or even a file
+
+**stdin(1)**: **Standard output**
+> data returned from commands
+
+**stderr(2)**: **Standard error**
+> Error messages that are returned are kept separated to stdout
+
+**Redirection operators**
+**| (pipe)**
+- The pipe command is used to send output from one command to another for processing
+   - cat /var/log/system.log | less
+
+**> Create/overwrite**
+- used to write ouput of a command to a file
+- create a file if not exits or overwrite it if it exits
+  - ls -l /etc > etclist.txt
+
+**>> Create/append**
+- used to append command output to a file
+- create a file if not exists, or add output on an existing one
+   - ls -l /etc >> etc.txt # write the output of a command on a file
+   - wc -l filename # count the lines in a file
+**< input**
+- use to send input of a file to a command
+- Often use to send data to a script for processing but works for command too
+   - less < etc.txt 
+
+**standard error**
+> redirect the ouput of console error to a file
+```sh
+ cat unexistant_filename 2> error.txt # the number 2 is associated with a standard error
