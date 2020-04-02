@@ -145,3 +145,17 @@ cmp file1 file2
 > redirect the ouput of console error to a file
 ```sh
  cat unexistant_filename 2> error.txt # the number 2 is associated with a standard error
+
+#### regular expressions
+> Regular expression otherwise refers as regex or even regexp is a set of characters used to match search pattern
+
+#### regular basics
+^ start of a string or line
+$ end of string or line
+. wildcard can match any character except newline(\n)
+| match a specifi character or group of character of both side (a | b a or b)
+t the character t
+az the string az
+
+
+
